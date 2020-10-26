@@ -45,7 +45,7 @@ function drawGreenCar() {
 }
 
 function drawBlueCar() {
-    ctx.drawImage(blueCar, (x1 + 25), (y1 + 20), carWidth, carHeight);
+    ctx.drawImage(blueCar, (x1 + 90), (y1 + 90), carWidth, carHeight);
 }
 
 function key_press(e) {
@@ -102,7 +102,6 @@ function moveLeft(key) {
                     ctx.rotate(10);
                     ctx.restore();
                     setCanvasBackground()
-                    drawBlueCar();
                     drawGreenCar();
                 }
             }
@@ -116,7 +115,6 @@ function moveLeft(key) {
                     ctx.restore();
                     setCanvasBackground();
                     drawBlueCar();
-                    drawGreenCar();
                 }
             }
     }
@@ -130,7 +128,6 @@ function moveUp(key) {
                     y1 = y1 - 10;
                     setCanvasBackground();
                     drawBlueCar();
-                    drawGreenCar();
                 }
             }
         case 38: // Up Arrow Key 
@@ -138,7 +135,6 @@ function moveUp(key) {
                 if (y1 > 0) {
                     y1 = y1 - 10;
                     setCanvasBackground();
-                    drawBlueCar();
                     drawGreenCar();
                 }
             }
@@ -153,7 +149,6 @@ function moveRight(key) {
                     x1 = x1 + 10;
                     setCanvasBackground();
                     drawBlueCar();
-                    drawGreenCar();
                 }
             }
         case 39: // Right Arrow Key
@@ -161,7 +156,6 @@ function moveRight(key) {
                 if (x1 < 650) {
                     x1 = x1 + 10;
                     setCanvasBackground();
-                    drawBlueCar();
                     drawGreenCar();
                 }
             }
@@ -176,8 +170,7 @@ function moveDown(key) {
             if (y1 < 500) {
                 y1 = y1 + 10;
                 setCanvasBackground();
-                drawBlueCar();
-                drawGreenCar();
+                drawBlueCar();    
             }
         }
         case 40: // Down Arrow Key
@@ -185,7 +178,6 @@ function moveDown(key) {
             if (y1 < 500) {
                 y1 = y1 + 10;
                 setCanvasBackground();
-                drawBlueCar();
                 drawGreenCar();
             }
         }
